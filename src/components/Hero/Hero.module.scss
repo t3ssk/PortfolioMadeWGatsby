@@ -1,0 +1,85 @@
+@import '../../assets/styleVars';
+
+.Hero{
+    position: relative;
+    width: 90%;
+    margin:10% auto;
+    display: grid;
+    grid-template-columns: 0.5fr repeat(2, 1fr) 0.5fr 3fr;
+    grid-template-rows: 0.5fr repeat(2, 1fr) 0.5fr;
+    grid-column-gap: 20px;
+    grid-row-gap: 0px;
+    
+}
+
+.Square{
+    grid-area: 1 / 1 / 4 / 4;
+    background-color: $primary-blue;
+}
+.Image{
+    grid-area: 2 / 2 / 5 / 5;
+}
+.Text{
+    grid-area: 2 / 5 / 5 / 6;
+    margin-left: 30px;
+    margin-top: 150px;
+    h1{
+        font-family: 'Roboto Slab', serif;
+        font-weight: 900;
+        font-size: 2rem;
+        padding: 40px;
+        text-decoration: underline wavy $primary-blue;
+    }
+    p {
+        line-height: 1.5rem;
+        letter-spacing: 1px;
+        padding: 40px;
+    }
+}
+
+@media screen and (max-width: 940px){
+.Hero{
+    margin:15% auto;
+}
+.Square{
+    grid-area: 1 / 1 / 3 / 4;
+    background-color: $primary-blue;
+    margin-top: 50px;
+}
+.Text{
+    grid-area: 1 / 5 / 5 / 6;}
+}
+
+@media screen and (max-width: 690px){
+.Square{display: none;}
+.Hero{grid-template-rows: 0.5fr 1fr}
+.Image{
+       grid-area: 1 / 1 / 1 / 6;
+}
+.Text{
+    grid-area: 2 / 1 / 5 / 6;
+    background-color: white;
+    margin-top: 10px;
+    h1,p{
+        padding: 20px;
+        margin-left: 5%;
+    }
+    h1{
+        background-color: $primary-blue;
+        color: white;
+        text-decoration:  underline wavy bisque;
+    }
+}
+}
+
+@media screen and (max-width: 305px){
+.Text{
+    h1{
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    }
+    p {
+        font-size: 0.9rem;
+    }
+}
+}

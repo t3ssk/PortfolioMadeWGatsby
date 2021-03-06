@@ -1,0 +1,93 @@
+@import '../../assets/styleVars.scss';
+
+.SubNav{
+    width: 100%;
+    text-align: right;
+    background-color: $primary-blue;
+    font-size: 1.5rem;
+    padding: 20px 0 20px 0;
+    overflow: hidden;
+
+    hr{
+        width: 110%;
+        margin-left: -5%;
+        border: none;
+        border-bottom: 1px solid white;
+    }
+
+
+    a{
+        color: white;
+        text-decoration: none;
+    }
+    a:hover {
+        background-image: url('../../assets/podtrzeni.svg');
+
+    }
+}
+.List{
+    list-style-type: decimal-leading-zero;
+    margin-left: -5%;
+        li{
+        padding: 20px;
+        text-transform: uppercase;
+        color: white;
+        border-bottom: 1px solid white;
+        width: 20%;
+        margin-left: 77%;
+
+    }
+}
+
+.Square{
+    width: 35px;
+    height: 35px;
+    border:1px solid white;
+    margin-top:-30px;
+}
+
+@media screen and (max-width: 1100px){
+    .List{
+        li{
+           width: 25%;
+           margin-left: 70%;
+        }
+    }
+}
+
+@media screen and (max-width: 880px){
+    .List{
+        li{
+          font-size: 1.2rem;
+        }
+    }
+}
+
+@media screen and (max-width: 700px){
+    .List{
+        li{
+          margin-left: 50%;
+          width: 40%;
+        }
+    }
+}
+
+@media screen and (max-width: 437px){
+    .List{
+        li{
+          margin-left: 35%;
+          width: 45%;
+        }
+    }
+}
+
+@media screen and (max-width: 350px){
+    .List{
+        li{
+          font-size: 1rem;
+          letter-spacing: 1px;
+          margin-left: 37%;
+          width: 52%;
+        }
+    }
+}

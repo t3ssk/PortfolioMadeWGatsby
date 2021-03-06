@@ -1,48 +1,33 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
+import React, {useRef} from 'react'
+import { HelmetData } from './HelmetData';
+import { useMediaQuery } from "react-responsive"
+import { LocomotiveScrollProvider } from "react-locomotive-scroll"
+import {NavDesktop} from './Nav/NavDesktop'
+import {NavMobile} from './Nav/NavMobile'
+import './Layout.module.scss'
+import { Footer } from './Footer/Footer';
 
-import React from "react"
-import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
 
-import Header from "./header"
-import Footer from "./footer"
-import SubFooter from "./subFooter"
-import "../assets/stylesheets/layout.scss"
-import {ThemeProvider} from 'styled-components'
-import theme from '../assets/stylesheets/theme'
-import Banner from './banner'
-
-const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-          phone
-          address
-        }
-      }
+export const Layout = ({children}) => {
+  const containerRef = useRef(null)
+    const isTabletOrMobile = useMediaQuery({ query: "(max-width: 704px)" })
+    if (typeof window !== "undefined") {
+      // eslint-disable-next-line global-require
+      require("smooth-scroll")('a[href*="#"]')
     }
-  `)
-  let {title, phone, address} = data.site.siteMetadata
-  return (
-    <ThemeProvider theme={theme}>
-      <Banner title={title} phone={phone} address={address}/>
-      <Header siteTitle={title}/>
-      <main>{children}</main>
-      <Footer/>
-      <SubFooter title={title}/>
-    </ThemeProvider>
-  )
+    return (
+    <>
+    <LocomotiveScrollProvider options={{
+      smooth: true}} containerRef={containerRef}>
+      <main data-scroll-container ref={containerRef}>
+        {isTabletOrMobile? <NavMobile/> : <NavDesktop/>}
+        <HelmetData/>
+        {children}    
+        
+        </main>
+        </LocomotiveScrollProvider>
+          
+        <Footer/>
+        </>
+    )
 }
-
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
-}
-
-export default Layout

@@ -1,0 +1,35 @@
+@import '../../assets/styleVars.scss';
+
+.Nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    li {
+        list-style: none;
+        
+    }
+    a:link, a:visited{
+        color: black;
+        text-decoration: none;
+        padding: 20px;
+    }
+    a:hover, a:active{
+        color: $primary-blue;
+        text-decoration: none;
+        background-image: url('../../assets/zakrouzkovani.svg');
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+}
+
+.Nav.Mobile{
+    display: block;
+    font-size: 20px;
+    background-color: white;
+    width: 100vw;
+    height: 100vh;
+}
+.Nav.Mobile>*{
+    padding: 20px;
+}

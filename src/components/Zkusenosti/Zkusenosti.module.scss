@@ -1,0 +1,54 @@
+@import '../../assets/_styleVars.scss';
+
+.Zkusenosti{
+    background-color: $secondary-gray;
+    position: relative;
+    margin-top: 150px;
+    margin-left: 5%;
+    width: 30%;
+    padding: 50px;
+    line-height: 2rem;
+    h2{
+        font-size: 2rem;
+        font-weight: 700;
+        position: relative;
+        margin-top: -70px;
+    }
+    p{
+        margin-top: 40px;
+    }
+    a{
+        padding: 5px;
+    }
+    a:link, a:visited {
+        text-decoration: none;
+        color: $primary-blue;
+        font-weight: 600;
+    }
+    a:hover, a:active {
+        color: black;
+        background-image: url('../../assets/zakrouzkovani.svg');
+        background-size: contain;
+    }
+}
+
+@media screen and (max-width: 880px){
+    .Zkusenosti{
+        width: 50%;
+    }
+
+}
+
+
+@media screen and (max-width: 500px){
+    .Zkusenosti{
+        width: 70%;
+        margin: 100px auto;
+        padding: 30px;
+        h2{
+            margin-top: -50px;
+            font-size: 1.7rem;
+        }
+    }
+
+}

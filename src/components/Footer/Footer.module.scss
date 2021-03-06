@@ -1,0 +1,28 @@
+@import '../../assets/styleVars.scss';
+
+.Footer{
+    background-color: $secondary-gray;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    padding-top: 20px;
+    p{
+        font-size: 0.9rem;
+    }
+    a {
+        font-size: 2rem;
+        padding: 0 20px 0 20px;
+    }
+    a:link, a:visited {
+        color: $primary-blue;
+        text-decoration: none;
+    }
+    a:hover, a:active{
+        color: black;
+    }
+
+}
+
+.Footer>* {
+    padding: 10px;
+}

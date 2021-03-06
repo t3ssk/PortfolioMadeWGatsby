@@ -1,0 +1,23 @@
+@import '../../assets/styleVars.scss';
+
+.Menu button{
+    cursor: pointer;
+    font-weight: 700;
+    color: $primary-blue;
+    font-size: 1rem;
+    padding: 20px;
+    background-color: white;
+    border: none;
+}
+
+.Menu:active{
+    color: black;
+}
+
+.MobileNav{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin:  20px auto;
+}
+
