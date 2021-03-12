@@ -8,7 +8,7 @@ const blog = ({pageContext}) => {
 
     return (
       <Layout>
-        {pageContext.posts.map(post => {
+        {pageContext.posts && pageContext.posts.map(post => {
           return post.Featured ? (
             <FeaturedPost
               key={post.BlogTitle}
@@ -31,10 +31,11 @@ const blog = ({pageContext}) => {
             />
           )
         })}
-        <Pagination currentPage={pageContext.currentPage}
+        {pageContext.posts && <Pagination
+          currentPage={pageContext.currentPage}
           numOfPages={pageContext.numOfPages}
-
-         />
+        />}
+        {!pageContext.posts && <h1>Tady zatím nic není</h1>}
       </Layout>
     )
 }

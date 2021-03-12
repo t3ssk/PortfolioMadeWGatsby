@@ -4,9 +4,11 @@ import * as styles from './styles/404.module.scss'
 
 
 const NotFoundPage = () => (<Layout>
-  <main className={styles.NotFound}>
+  <main>
+  <div className={styles.NotFound}>
   <h1>404</h1>
-  <h2>Něco se pokazilo. Nebo jsi možná schválně na stránce, která neexistuje?</h2></main>
+  <h2>Něco se pokazilo. Nebo jsi možná schválně na stránce, která neexistuje?</h2></div>
+  </main>
 </Layout>
 
 )

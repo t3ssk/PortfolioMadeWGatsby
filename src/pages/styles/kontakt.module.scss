@@ -1,0 +1,110 @@
+@import '../../assets/_styleVars.scss';
+
+.Contact{
+    width: 50%;
+    margin: 100px auto;
+
+    h1{
+        font-size: 2rem;
+        text-align: center;
+        font-weight: 700;
+        text-decoration: underline wavy $primary-blue;
+        padding-bottom: 70px;
+    }
+}
+
+.Contact__form{
+    background-color: $secondary-gray;
+    padding: 50px;
+
+    input, textarea, button{
+        display: block;
+        margin: 20px auto;
+    }
+    label{
+        display: block;
+        position: relative;
+        margin-bottom: -10px;
+        font-weight: 700;
+        font-size: 0.8rem;
+        
+    }
+    input{
+        width: 99%;
+        height: 2rem;
+        border: 1px solid #ccc;
+        padding-left: 10px;
+        font-size: 0.9rem;
+    }
+    textarea{
+         width: 98%;
+         height: 8rem;
+         border: 1px solid #ccc;
+         padding: 10px;
+    }
+
+    button{
+        width: 101%;
+        border: none;
+        background-color: $primary-blue;
+        color: white;
+         font-family: 'Roboto Mono', monospace;
+         font-weight: 700;
+         font-size: 1.5rem;
+         padding: 15px;
+
+    }
+    button:hover{
+        background-color: darken($primary-blue, 10%);
+    }
+    button:active{
+        background-color: darken($primary-blue, 20%);
+        outline: none;
+    } 
+
+}
+
+@media screen and (max-width: 1050px){
+    .Contact{
+    width: 70%;}
+    .Contact__form{
+
+    textarea{
+        width: 96%;
+    }
+    button{
+        width: 102%;
+    }
+}
+}
+
+
+@media screen and (max-width: 480px){
+    .Contact{
+    width: 90%;}
+    .Contact__form{
+
+    textarea{
+        width: 95%;
+    }
+    button{
+        width: 102%;
+    }
+}
+
+}
+
+@media screen and (max-width: 355px){
+  .Contact__form{
+    padding: 50px 20px;
+    textarea{
+        width: 96%;
+    }
+    button{
+        width: 103%;
+    }
+}
+    .Contact__form > * {
+        margin-left: -4%;
+    }
+}
