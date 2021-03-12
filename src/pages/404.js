@@ -1,11 +1,12 @@
 import React from "react"
 import { Layout } from "../Components/Layout";
-
+import * as styles from './styles/404.module.scss'
 
 
 const NotFoundPage = () => (<Layout>
-  <h2>404</h2>
-  <h3>Ajajaj, jsi na stránce, která ještě neexistuje.</h3>
+  <main className={styles.NotFound}>
+  <h1>404</h1>
+  <h2>Něco se pokazilo. Nebo jsi možná schválně na stránce, která neexistuje?</h2></main>
 </Layout>
 
 )

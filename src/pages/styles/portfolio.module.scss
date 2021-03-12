@@ -1,0 +1,27 @@
+@import '../../assets/_styleVars.scss';
+.Portfolio {
+    margin: 8% auto;
+    width: 100%;
+}
+
+.heading{
+    text-align: center;
+    border: 1px solid $primary-blue;
+    width: 20%;
+    margin: auto;
+}
+
+@media screen and (max-width: 490px){
+    .Portfolio{
+        margin: 20% auto;
+    }
+    .heading{
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 350px){
+    .Portfolio{
+        margin: 25% auto;
+    }
+}

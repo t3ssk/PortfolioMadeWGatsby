@@ -1,0 +1,32 @@
+@import '../../assets/_styleVars.scss';
+
+.More{
+    width: 40%;
+    padding: 50px;
+    background-color: $primary-blue;
+    margin-left: 5%;
+    margin-bottom: 50px;
+    p
+    {color: white;
+    line-height: 2rem;
+    letter-spacing: 1px;
+    padding: 50px 20px 20px 20px;
+    }
+}
+
+@media screen and (max-width: 880px){
+    .More{
+        width: 50%;
+    }
+
+}
+
+
+@media screen and (max-width: 500px){
+    .More{
+        width: 70%;
+        margin: 100px auto;
+        padding: 30px;
+    }
+
+}

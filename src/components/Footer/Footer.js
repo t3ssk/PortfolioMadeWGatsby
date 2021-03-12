@@ -10,7 +10,7 @@ export const Footer = () => {
     return (
       <div className={styles.Footer}>
         <p>© Tereza Konečná. Vytvořeno s Gatsby a Strapi.</p>
-        <div className={styles.Socials}>
+        <div>
           <a href="https://www.facebook.com/tess.konecna/">
             <FaFacebookSquare />
           </a>

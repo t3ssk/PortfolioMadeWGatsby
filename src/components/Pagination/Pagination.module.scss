@@ -1,0 +1,39 @@
+@import '../../assets/styleVars.scss';
+
+.Pagination{
+    margin: 20px auto;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    li {
+        padding: 10px;
+        background-color: $secondary-gray;
+        font-weight: 700;
+        list-style-type: none;
+        font-size: 0.8rem;
+    }
+    span{
+       background-color: $primary-blue;
+        color: $secondary-gray; 
+        padding: 10px;
+        overflow: hidden;
+    }
+
+    a:link, a:visited {
+        color: $primary-blue;
+        text-decoration: none;
+    }
+    a:hover, a:active{
+        color:black;
+        background-size: cover;
+    }
+    
+}
+.Arrows {
+     margin: 0 20px;
+    border-radius: 50%;
+    text-align: center;
+    vertical-align: baseline;
+}
+

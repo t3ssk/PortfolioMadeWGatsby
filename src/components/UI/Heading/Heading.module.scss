@@ -1,0 +1,14 @@
+.Heading{
+    font-size: 2rem;
+    font-weight: 700;
+    position: relative;
+    margin-top: -70px;
+}
+
+@media screen and (max-width: 500px){
+        .Heading{
+            margin-top: -50px;
+            font-size: 1.7rem;
+        }
+}
+

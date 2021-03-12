@@ -1,0 +1,10 @@
+@import '../assets/styleVars.scss'; 
+
+.Name{
+    font-weight: 700;
+    text-align: center;
+    font-size: 2rem;
+    text-transform: uppercase;
+    margin-top: 50px ;
+    border-bottom: 1px solid $primary-blue;
+}

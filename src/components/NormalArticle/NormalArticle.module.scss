@@ -1,0 +1,110 @@
+@import '../../assets/_styleVars.scss';
+
+.Normal_article{
+    width: 50%;
+    margin: 50px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: white;
+
+    a:link, a:visited{
+        color: $primary-blue;
+        text-decoration: none;
+    }
+
+    a:hover, a:active{
+        color: black;
+        }
+
+    h2{
+        font-weight: 700;
+        font-size: 1.5rem;
+    }
+    p{
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+}
+
+
+.Thumbnail{
+    width: 100%;
+}
+
+.Text__card{
+    margin-left: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.Text__card>*{
+    margin: 10px 0;
+}
+
+.Text__meta{
+    display: flex;
+    justify-content: space-between;
+    p {
+        font-size: 0.8rem;
+        opacity: 0.4;
+    }
+}
+
+.Tags{
+    display: inline;
+    background-color: $secondary-gray;
+    padding: 2px 10px;
+    margin: 5px;
+    border-radius: 5px;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+}
+
+@media screen and (max-width: 1320px){
+    .Normal_article{
+        width: 70%;
+    }
+}
+
+
+@media screen and (max-width: 1050px){
+    .Normal_article{
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 890px){
+    .Normal_article{
+        display: block;
+    }
+.Text__card{
+    margin-left: 0px;}
+.Thumbnail{
+    width: 50%;
+    margin: 30px auto;
+}
+
+}
+@media screen and (max-width: 520px){
+
+.Thumbnail{
+    display: none;
+}
+.Text__meta{
+    display: block;
+}
+
+.Text__meta>*{
+    margin: 10px 0;
+}
+}
+
+@media screen and (max-width: 340px){
+
+.Text__card{
+    p{
+        font-size: 0.8rem;
+    }
+}
+}
